@@ -1,0 +1,29 @@
+{
+  "name": "mlmtradecoin",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Andrej Panasyk <ridiks100@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bourbon": "4.2",
+    "PACE": "pace#^1.0.2",
+    "clipboard": "^1.5.16",
+    "intl-tel-input": "^10.0.7",
+    "bootstrap-sass-grid": "^4.0.1"
+  },
+  "devDependencies": {
+    "normalize.sass": "^3.0.0"
+  }
+}

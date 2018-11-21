@@ -1,0 +1,101 @@
+version: '2'
+
+services:
+  php:
+    build: ./docker/php
+    volumes:
+      - ./:/var/www/mlmtradecoin
+    links:
+      - postgres
+      - redis
+      - tarantool
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_URL=http://verumtrade.local
+      - DB_CONNECTION=pgsql
+      - TIMEOUT=1311603
+      - DB_HOST=postgres
+      - DB_DATABASE=mlmtradecoin
+      - DB_USERNAME=mlmtradecoin
+      - DB_PASSWORD=qwertrewqwdfgnhygb
+      - TARANTOOL_URL=tcp://tarantool:3301
+      - TARANTOOL_USER_NAME=admin
+      - TARANTOOL_USER_PASSWORD=qweadsfvbhtsrafdvbhj1234565890
+      - REDIS_HOST=redis
+      - RPC_URL=http://verumcoind:9554
+      - RPC_USERNAME=user
+      - RPC_PASSWORD=123
+      - RPC_DEBUG=false
+      - MAIL_HOST=mailtrap.io
+      - MAIL_PORT=2525
+      - MAIL_USERNAME=44ed4351eb6b06
+      - MAIL_PASSWORD=756bd4bc3f67fb
+      - MAIL_FROM_ADDRESS=no-replase@verumtrade.dev
+      - _QUEUE_DRIVER=redis
+    tty: true
+
+  verumcoind:
+    build: ./docker/verumcoind
+    restart: unless-stopped
+    command:
+      -rpcuser=user
+      -rpcpassword=123
+      -rpcallowip=*
+      -server
+      -walletnotify="php /var/www/mlmtradecoin/artisan walletnotify %s"
+      -blocknotify="php /var/www/mlmtradecoin/artisan blocknotify %s"
+      -debugnet
+      -debug
+    links:
+      - php
+    volumes_from:
+      - php
+    volumes:
+      - verumcoind:/data
+
+  postgres:
+    build: ./docker/postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_DB: mlmtradecoin
+      POSTGRES_USER: mlmtradecoin
+      POSTGRES_PASSWORD: qwertrewqwdfgnhygb
+
+  redis:
+    build: ./docker/redis
+    volumes:
+      - redis:/data
+
+  tarantool:
+    build: ./docker/tarantool
+    environment:
+      TARANTOOL_USER_NAME: admin
+      TARANTOOL_USER_PASSWORD: qweadsfvbhtsrafdvbhj1234565890
+    volumes:
+      - ./tarantool/:/opt/tarantool
+      - tarantool:/var/lib/tarantool
+    ports:
+      - "33111:3301"
+
+  nginx:
+    build: ./docker/nginx
+    volumes_from:
+      - php
+    links:
+      - php
+    ports:
+      - "8080:80"
+
+volumes:
+  postgres:
+    driver: "local"
+  redis:
+    driver: "local"
+  tarantool:
+    driver: "local"
+  verumcoind:
+    driver: "local"

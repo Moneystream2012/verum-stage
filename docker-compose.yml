@@ -1,0 +1,114 @@
+version: '2'
+
+services:
+  php:
+    build: ./docker/php
+#    command: "/start.sh && php-fpm"
+    volumes_from:
+      - tarantool
+      - postgres
+    volumes:
+      - /root/mlmtradecoin/:/var/www/mlmtradecoin
+    links:
+      - postgres
+      - redis
+      - tarantool
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_LOG_LEVEL=error
+      - APP_URL=https://backoffice.verumtrade.com
+      - DB_CONNECTION=pgsql
+      - TIMEOUT=720
+      - DB_HOST=postgres
+      - DB_DATABASE=mlmtradecoin
+      - DB_USERNAME=mlmtradecoin
+      - DB_PASSWORD=qwertrewqwdfgnhygb
+      - TARANTOOL_URL=tcp://tarantool:3301
+      - TARANTOOL_USER_NAME=admin
+      - TARANTOOL_USER_PASSWORD=qweadsfvbhtsrafdvbhj1234565890
+      - REDIS_HOST=redis
+      - RPC_URL=http://verumcoind:9554
+      - RPC_USERNAME=user
+      - RPC_PASSWORD=123
+      - RPC_DEBUG=false
+      - MAIL_DRIVER=sparkpost
+      - SPARKPOST_SECRET=62406a95e37f39164017e3953441081dbb4a04ae
+      - MAIL_FROM_ADDRESS=no-replase@verumtrade.com
+      - QUEUE_DRIVER=sync
+      - PM_ACCOUNTID=6183848
+      - PM_MARCHANTID=U15527412
+      - PM_ALT_PASSPHRASE=6aCzBh0486McbGSuaHINXwRlr
+      - PM_PAYMENT_URL_METHOD=LINK
+      - PM_NOPAYMENT_URL_METHOD=POST
+      - INVISIBLE_RECAPTCHA_SITEKEY=6LeoUU0UAAAAAK2FEU2cMBOXUqv7nLLlLTOQRNsW
+      - INVISIBLE_RECAPTCHA_SECRETKEY=6LeoUU0UAAAAANBovqN1a2M_fgdCJdx7fEGoBE9l
+      - INVISIBLE_RECAPTCHA_BADGEHIDE=false
+      - INVISIBLE_RECAPTCHA_DATABADGE='bottomright'
+      - INVISIBLE_RECAPTCHA_TIMEOUT=5
+      - INVISIBLE_RECAPTCHA_DEBUG=false
+  verumcoind:
+      build: ./docker/verumcoind
+      restart: always
+      command:
+        -rpcuser=user
+        -rpcpassword=123
+        -rpcallowip=*
+        -server
+        -debugnet
+        -debug
+        -walletnotify="php /var/www/mlmtradecoin/artisan walletnotify %s"
+        -blocknotify="php /var/www/mlmtradecoin/artisan blocknotify %s"
+        -reservebalance=9999999999
+      volumes_from:
+        - php
+      links:
+        - php
+      volumes:
+        - /root/verumcoind/:/data
+
+  nginx:
+    build: ./docker/nginx.prod
+    volumes_from:
+      - php
+    links:
+      - php
+    ports:
+      - "80:80"
+      - "443:443"
+
+  postgres:
+    build: ./docker/postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_DB: mlmtradecoin
+      POSTGRES_USER: mlmtradecoin
+      POSTGRES_PASSWORD: qwertrewqwdfgnhygb
+
+  redis:
+    build: ./docker/redis
+    volumes:
+      - redis:/data
+
+  tarantool:
+    build: ./docker/tarantool
+    environment:
+      TARANTOOL_USER_NAME: admin
+      TARANTOOL_USER_PASSWORD: qweadsfvbhtsrafdvbhj1234565890
+    volumes:
+      - /root/mlmtradecoin/tarantool/:/opt/tarantool
+      - /root/tarantool:/var/lib/tarantool
+#      - tarantool:/var/lib/tarantool
+    ports:
+      - "33111:3301"
+
+volumes:
+  postgres:
+    driver: "local"
+  redis:
+    driver: "local"
+  tarantool:
+    driver: "local"

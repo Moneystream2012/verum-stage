@@ -1,0 +1,185 @@
+@import "../libs/bourbon/app/assets/stylesheets/bourbon"
+@import "mixin/bootstrap-breakpoints"
+@import "personal-office/css/bootstrap.min.css"
+@import "personal-office/css/veneto-admin.min.css"
+
+// Bootstrap Custom
+.navbar .navbar-brand
+  height: 50px
+  .sc-visible img
+    margin-top: 12px
+    margin-left: -3px
+    max-width: inherit
+    width: 25px
+    height: 25px
+  .sc-hidden img
+    margin-top: 5px
+    width: 209px
+    height: 39px
+
+.table
+  > tbody > tr > td
+    vertical-align: middle
+    .label
+      margin-bottom: 4px
+      display: inline-block
+
+.alert
+  margin: 10px 0 10px
+  &-warning
+    background-color: #fffcef
+    border-color: #f7eee9
+    color: #8a6d3b
+  &-danger
+    background-color: rgba(255, 217, 213, 0.41)
+    border-color: #f1bbbb
+    color: #8a383e
+  &-info
+    background-color: #d4f0fd
+    border-color: #bee8ef
+    color: #4eb3e0
+
+.form-control[readonly], .form-control
+  background-color: #fff
+  cursor: inherit
+
+.page-wrapper
+  position: static
+
+.sidebar
+  padding-top: 55px
+
+.page-subheading-panel
+  .new-member
+    margin-left: 10px
+    +breakpoint(sm-max)
+      float: right
+      margin-bottom: 10px
+
+@media screen and (min-width: 768px)
+  .modal-dialog
+    width: 700px /* New width for default modal */
+
+@media screen and (min-width: 992px)
+  .modal-lg
+    width: 800px /* New width for large modal */
+
+
+.promotional-link
+  border-bottom-right-radius: 1000px
+  border-top-right-radius: 1000px
+
+.profile-info
+  line-height: 1 !important
+  padding-top: 12px !important
+  padding-bottom: 10px !important
+  font-size: 15px
+  small
+    padding-top: 2px
+    font-size: 11px
+    display: block
+    span
+      opacity: .2
+
+.product
+  border: 4px solid #f1f1f1
+  box-sizing: content-box
+  padding: 0
+  position: relative
+  &-disabled
+    position: relative
+    &::before
+      z-index: 3
+      opacity: .25
+      display: block
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      background-color: #ddd
+    .btn
+      background: #f5f5f5 !important
+      box-shadow: 0 5px #ccc
+      color: #555 !important
+      border-color: #d0d0d0
+      cursor: not-allowed
+      pointer-events: none
+      opacity: .65
+  &-body
+    background: #fff !important
+    padding: 0
+    box-sizing: content-box
+  &-footer
+    background: none !important
+  &-0
+    border-color: #f1f1f1
+  &-1
+    border-color: #5cb85c
+  &-best
+    border-color: #357ebd !important
+
+    .product-label
+      border-color: #357ebd
+    &::after
+      content: "\f0a3"
+      display: block
+      position: absolute
+      width: 100%
+      text-align: center
+      left: 0
+      right: 0
+      font: normal normal normal 50px/1 FontAwesome
+      top: 14px
+      color: #357ebd
+      z-index: 1
+  &-body-0
+    border-color: #ddd
+  &-body-1
+    border-color: #5cb85c
+  &-label
+    border: 4px solid #fff
+    border-radius: 50%
+    width: 30px
+    height: 30px
+    display: block
+    text-align: center
+    line-height: 30px
+    padding: 0
+    margin: 20px auto 32px
+    z-index: 2
+    font-size: 17px
+    box-sizing: content-box
+    position: relative
+    background: #fff
+    color: #333
+  &-label-0
+    border-color: #ddd
+  &-label-1
+    border-color: #5cb85c
+
+.label-title
+  color: #ddd
+  text-transform: uppercase
+  font-weight: 400
+  font-size: 10px
+  display: block
+  top: 63px
+  left: 0
+  right: 0
+  position: absolute
+  text-align: center
+  z-index: 1
+
+.list-group-item
+  border-color: #f1f1f1
+  border-radius: 0 !important
+
+@import "personal-office/binary-tree"
+@import "personal-office/unilevel"
+@import "personal-office/history"
+@import "personal-office/dashboard"
+@import "personal-office/changelog-panel"

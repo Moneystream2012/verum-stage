@@ -1,0 +1,65 @@
+#unilevel
+    max-width: initial
+    ol li
+        list-style: none
+        margin-left: 20px
+        position: relative
+    .dd-item > button
+        background-color: #f5f5f5
+        border: 1px solid #e6e8ea
+        margin-top: 0
+        position: absolute
+        left: -30px
+        top: 47px
+        display: inline-block
+        font: normal normal normal 14px/1 FontAwesome
+        font-size: inherit
+        text-rendering: auto
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        transform: translate(0, 0)
+        overflow: hidden
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        padding: 0
+        &[data-action=expand]:before
+            content: "\f067"
+            width: 25px
+            height: 25px
+            display: block
+            z-index: 1
+            padding: 5px
+        &[data-action=collapse]:before
+            content: "\f068"
+            width: 25px
+            height: 25px
+            display: block
+            z-index: 1
+            padding: 5px
+    .dd-handle
+        margin: 5px 0
+
+.panel-referral
+    border-width: 1px
+    border-style: solid
+    border-bottom-width: 5px
+
+.rank-text-center
+    position: absolute
+    left: 15px
+    right: 15px
+
+.deposits
+    .deposit-item
+        padding-top: 7px
+        position: relative
+        text-align: center
+        width: 71px
+        height: 62px
+        margin-left: 5px
+        float: left
+        .fa
+            display: block
+            font-size: 30px
+

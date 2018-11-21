@@ -1,0 +1,13 @@
+/node_modules
+/public/storage
+/vendor
+/.idea
+/resources/assets/libs/
+/_ide_helper_models.php
+/_ide_helper.php
+/.phpstorm.meta.php
+.php_cs.cache
+resources/assets/files
+/.docker-sync
+/resources/res
+dump.rdb

@@ -1,0 +1,64 @@
+.changelog-panel
+  .panel
+    color: #fff
+    margin-bottom: 0
+  .time
+    margin-top: 15px
+  .panel-header
+    padding: 10px 25px
+    border-bottom: 1px solid #fff
+  .panel-body
+    text-align: center
+    font-size: 18px
+    padding: 10px 80px 30px
+    .fa
+      font-size: 90px
+      margin-bottom: 20px
+      color: #feaf04
+    strong
+      display: inline-block
+      margin-top: 20px
+      color: #feaf04
+  .panel-success
+    background-color: #7db762
+    .fa:before
+      content: "\f00c"
+  .panel-danger
+    background-color: #b76262
+    .fa:before
+      content: "\f00d"
+  .panel-warning
+    background-color: #66abab
+    .fa:before
+      content: "\f071"
+
+  +breakpoint(xxs)
+    .panel-header
+      text-align: center
+      .time
+        float: none !important
+      img
+        float: none !important
+  +breakpoint(xxxs)
+    .panel-header
+      text-align: center
+      .time
+        float: none !important
+      img
+        float: none !important
+  +breakpoint(xxs)
+    .panel-body
+      font-size: 16px
+      padding: 10px 30px 30px
+      .fa
+        font-size: 80px
+      strong
+        margin-top: 15px
+  +breakpoint(xxxs)
+    .panel-body
+      font-size: 16px
+      padding: 10px 30px 30px
+      .fa
+        font-size: 80px
+      strong
+        margin-top: 15px
