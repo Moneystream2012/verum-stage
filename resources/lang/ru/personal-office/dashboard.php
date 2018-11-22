@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Dashboard',
+    'title' => 'Приборная панель',
     '',
 ];

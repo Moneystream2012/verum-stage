@@ -13,12 +13,12 @@ return [
     |
     */
 
-    'failed'                 => 'Invalid username or password',
-    'signed_out'             => 'Signed out successfully.',
-    'signed_in-success'      => 'Signed in successfully.',
-    'signed_in-error'        => 'You are already logged in.',
-    'session_timeout'        => 'Your session expired. Please sign in again to continue.',
-    'sign_before-continuing' => 'You need to sign in or sign up before continuing.',
-    'throttle'               => 'Too many login attempts. Please try again in :seconds second.',
+    'failed'                 => 'Неправильное имя пользователя или пароль',
+    'signed_out'             => 'Вышли успешно.',
+    'signed_in-success'      => 'Зашли успешно.',
+    'signed_in-error'        => 'Ошибка - Вы уже залогинены.',
+    'session_timeout'        => 'Срок действия вашей сессии истек. Повторите авторизацию, чтобы продолжить.',
+    'sign_before-continuing' => 'Прежде чем продолжить, Вам нужно войти в систему или зарегистрироваться.',
+    'throttle'               => 'Слишком много попыток входа в систему. Повторите попытку через :seconds секунд.',
 
 ];

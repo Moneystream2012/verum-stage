@@ -13,19 +13,19 @@ return [
     |
     */
 
-    'accepted'   => 'The :attribute must be accepted.',
-    'active_url' => 'The :attribute is not a valid URL.',
-    'after'      => 'The :attribute must be a date after :date.',
-    'alpha'      => 'The :attribute may only contain letters.',
-    'alpha_dash' => 'The :attribute may only contain letters, numbers, and dashes.',
-    'alpha_num'  => 'The :attribute may only contain letters and numbers.',
-    'array'      => 'The :attribute must be an array.',
-    'before'     => 'The :attribute must be a date before :date.',
+    'accepted'   => ':attribute должен быть принят.',
+    'active_url' => ':attribute недействительный URL.',
+    'after'      => ':attribute должна быть датой после :date.',
+    'alpha'      => ':attribute может содержать только буквы.',
+    'alpha_dash' => ':attribute может содержать только буквы, цифры, и дефисы.',
+    'alpha_num'  => ':attribute может содержать только буквы и цифры.',
+    'array'      => ':attribute должна быть массивом.',
+    'before'     => ':attribute долежн быть датой до :date.',
     'between'    => [
-        'numeric' => 'The :attribute must be between :min and :max.',
-        'file'    => 'The :attribute must be between :min and :max kilobytes.',
-        'string'  => 'The :attribute must be between :min and :max characters.',
-        'array'   => 'The :attribute must have between :min and :max items.',
+        'numeric' => ':attribute должно быть между :min and :max.',
+        'file'    => ':attribute должно быть между :min and :max kilobytes.',
+        'string'  => ':attribute должно быть между :min and :max characters.',
+        'array'   => ':attribute должно быть между :min and :max items.',
     ],
     'boolean'        => 'The :attribute field must be true or false.',
     'confirmed'      => 'The :attribute confirmation does not match.',
@@ -72,15 +72,15 @@ return [
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
     'same'                 => 'The :attribute and :other must match.',
     'size'                 => [
-        'numeric' => 'The :attribute must be :size.',
-        'file'    => 'The :attribute must be :size kilobytes.',
-        'string'  => 'The :attribute must be :size characters.',
-        'array'   => 'The :attribute must contain :size items.',
+        'numeric' => ':attribute должен быть  :size.',
+        'file'    => ':attribute должен быть :size килобайтов.',
+        'string'  => ':attribute должен содержать :size символов.',
+        'array'   => ':attribute должен содержать :size элементов.',
     ],
-    'string'   => 'The :attribute must be a string.',
-    'timezone' => 'The :attribute must be a valid zone.',
-    'unique'   => 'The :attribute has already been taken.',
-    'url'      => 'The :attribute format is invalid.',
+    'string'   => ':attribute должен быть строкой.',
+    'timezone' => ':attribute должна быть действительной зоной.',
+    'unique'   => ':attribute уже занят.',
+    'url'      => ':attribute формат URL недействителен.',
 
     /*
     |--------------------------------------------------------------------------
@@ -111,15 +111,15 @@ return [
     */
 
     'attributes' => [
-        'transaction_password' => 'Transaction password',
+        'transaction_password' => 'Пароль транзакции',
     ],
 
-    'phone'     => 'The :attribute field contains an invalid number.',
-    'recaptcha' => 'The :attribute field is not correct.',
+    'phone'     => ':attribute поле содержит недопустимое число.',
+    'recaptcha' => ':attribute поле неверно.',
 
     // user
-    'is_user'        => 'This user does not exist.',
-    'not_user'       => 'User is not found.',
-    'deficiency'     => 'Insufficient funds on the balance.',
-    'check_password' => 'The :attribute incorrect password.',
+    'is_user'        => 'Этот пользователь не существует.',
+    'not_user'       => 'Пользователь не найден.',
+    'deficiency'     => 'Недостаточно средств на балансе.',
+    'check_password' => ':attribute неверный пароль.',
 ];

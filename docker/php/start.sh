@@ -12,7 +12,7 @@ chmod -R 777 bootstrap/cache
 composer install
 php artisan config:cache
 php artisan route:cache
-php artisan opcache:optimize
+#php artisan opcache:optimize
 
 /usr/bin/nohup php ./artisan queue:work --queue=high,default > ./storage/logs/queue.log 2>&1 &
 

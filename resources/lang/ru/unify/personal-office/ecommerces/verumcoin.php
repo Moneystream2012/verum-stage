@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'title' => 'Order #' . random_int(10000000,99999999),
+    'title' => 'Заказ #' . random_int(10000000,99999999),
 ];

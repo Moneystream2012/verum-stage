@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Affilate program',
+    'title' => 'Партнерская программа',
 
 ];

@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'title' => 'Notification',
+    'title' => 'Уведомление',
 
-    'activation_binary_side' => 'TeamDeveloper: Active',
-    'new_plan'               => 'The new plan! Amount reward: :reward $',
-    'new_support_message'    => 'New messages from of technical support',
-    'new_notice_message'     => 'New messages:',
+    'activation_binary_side' => 'TeamDeveloper: Активен',
+    'new_plan'               => 'Новый тарифный план! Сумма вознаграждения: :reward $',
+    'new_support_message'    => 'Новые сообщения от технической поддержки',
+    'new_notice_message'     => 'Новые сообщения:',
 ];

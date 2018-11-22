@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'title' => 'Reset Password',
+    'title' => 'Сбросить пароль',
 ];

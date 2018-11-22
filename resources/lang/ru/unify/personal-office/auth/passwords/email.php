@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'title' => 'Forgot your password?',
+    'title' => 'Забыли Ваш пароль?',
 ];

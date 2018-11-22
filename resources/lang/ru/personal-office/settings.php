@@ -5,8 +5,8 @@ return [
 
     //	msg
     'success' => [
-        'payment'              => 'Payment settings saved.',
-        'password'             => 'Password settings saved.',
-        'transaction_password' => 'Transaction password saved.',
+        'payment'              => 'Настройки платежей записаны.',
+        'password'             => 'Настройки доступов записаны.',
+        'transaction_password' => 'Пароль для проведения транзакций записан.',
     ],
 ];

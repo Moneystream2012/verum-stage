@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'title' => 'Replenishment',
+    'title' => 'Пополнение',
 
-    'comment' => 'Replenishment :to amount: :amount $',
+    'comment' => 'Пополнение :to amount: :amount $',
 
     'status' => [
-        0 => 'processing',
-        1 => 'success',
+        0 => 'обрабатывается',
+        1 => 'успешно',
     ],
 ];

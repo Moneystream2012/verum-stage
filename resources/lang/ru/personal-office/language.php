@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'menu_title' => 'Language',
+    'menu_title' => 'Язык',
 ];

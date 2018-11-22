@@ -4,86 +4,86 @@ return [
     'payments'  => [
         'deposit'       => [
             'icon'  => 'fa-briefcase',
-            'title' => 'Payment product: Investment Token',
-            'body'  => 'Amount: :amount USD</br> Name: :name <br>Payment method: :method',
+            'title' => 'Платежный продукт: Инвестиционный Токен',
+            'body'  => 'Сумма: :amount USD</br> Имя: :name <br>Метод платежа: :method',
         ],
         'active_member' => [
             'icon'  => 'fa-user',
-            'title' => 'Activation for a year',
-            'body'  => 'Amount: :amount USD</br> Activation to: :active_at <br>Payment method: :method',
+            'title' => 'Активация на год',
+            'body'  => 'Сумма: :amount USD</br> Активировано до: :active_at <br>Метод платежа: :method',
         ],
         'shares'        => [
             'icon'  => 'fa-file-text',
-            'title' => 'The purchase of shares',
-            'body'  => 'Amount: :amount USD</br> Number of: :number_of <br>Payment method: :method',
+            'title' => 'Покупка акций',
+            'body'  => 'Сумма: :amount USD</br> Количество: :number_of <br>Метод платежа: :method',
         ],
     ],
     'transfers' => [
         'deposit'          => [
             'icon'  => 'fa-briefcase',
-            'title' => 'Output from the package',
-            'body'  => 'Package №: :id <br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Вывод из пакета',
+            'body'  => 'Пакет №: :id <br> Сумма: :amount USD<br> Выведено на: :to',
         ],
         'shares'           => [
             'icon'  => 'fa-files-o',
-            'title' => 'Sell Shares',
-            'body'  => 'Number of: :number_of <br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Продажа акций',
+            'body'  => 'Количество: :number_of <br> Сумма: :amount USD<br> Выведено на: :to',
         ],
         'user_from-amount' => [
             'icon'  => 'fa-exchange',
-            'title' => 'Transfer to user',
-            'body'  => 'User: :username <br> Amount: :amount USD<br> Commission: :cost_amount USD<br> Type balance: :method',
+            'title' => 'Перевод пользователю',
+            'body'  => 'Пользователь: :username <br> Сумма: :amount USD<br> Комиссия: :cost_amount USD<br> Тип баланса: :method',
         ],
         'user_to-amount'   => [
             'icon'  => 'fa-exchange',
-            'title' => 'The transfer of user',
-            'body'  => 'User: :username <br> Amount: :amount USD<br> Type balance: :method',
+            'title' => 'Перевод от пользователя',
+            'body'  => 'Пользователь: :username <br> Сумма: :amount USD<br> Тип баланса: :method',
         ],
         'exchange'         => [
             'icon'  => 'fa-random',
-            'title' => 'Exchange',
-            'body'  => 'Exchange: :method => :to <br> Amount: :amount USD',
+            'title' => 'Обмен',
+            'body'  => 'Обмен: :method => :to <br> Сумма: :amount USD',
         ],
         'charities'        => [
             'icon'  => 'fa-heart',
-            'title' => 'Сharity',
-            'body'  => 'Amount: :amount USD<br> Method: :method',
+            'title' => 'Благотворительность',
+            'body'  => 'Сумма: :amount USD<br> Метод: :method',
         ],
 
     ],
     'profits'   => [
         'deposit'         => [
             'icon'  => 'fa-briefcase',
-            'title' => 'Payout product: Investment Token',
-            'body'  => 'ID : :id <br>Name : :name <br> Number of: :number_of <br> Percent per month: :percent %<br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Продукт выплат: инвестиционный токен',
+            'body'  => 'ID : :id <br>Имя : :name <br> Количество: :number_of <br> Процентов в месяц: :percent %<br> Сумма: :amount USD<br> Выведено на: :to',
         ],
         'direct'          => [
             'icon'  => 'fa-gift',
-            'title' => 'Calculate bonus: Direct',
-            'body'  => 'Bonus: :bonus % <br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Подсчитанный бонус: Прямой',
+            'body'  => 'Бонус: :bonus % <br> Сумма: :amount USD<br> Выведено на: :to',
         ],
         'compute_rewards' => [
             'icon'  => 'fa-gift',
-            'title' => 'Compute rewards',
+            'title' => 'Начисленные вознаграждения',
             'body'  => '
-                <span class="">Compute  №:number_of</span>
+                <span class="">Начисление  №:number_of</span>
                 <table class="table no-margin-bottom"><thead>
                 <tr>
-                 <th>Type</th>
-                  <th>Weekly turnover</th>
+                 <th>Тип</th>
+                  <th>Еженедельный оборот</th>
                   <th>%</th>
-                  <th>Output to</th>
-                  <th>Amount</th>
+                  <th>Выведено на</th>
+                  <th>Сумма</th>
                 </tr></thead><tbody>
                 <tr>
-                  <td>Binary bonus</td>
+                  <td>Бинарный бонус</td>
                   <td>:binary-point_left | :binary-point_right</td>
                   <td>:binary-bonus</td>
                   <td>:binary-to</td>
                   <td>:binary-amount USD</td>
                 </tr>
                 <tr>
-                  <td>Direct bonus</td>
+                  <td>Прямой бонус</td>
                   <td>:direct-reward</td>
                   <td>:direct-bonus</td>
                   <td>:direct-to</td>
@@ -93,45 +93,45 @@ return [
         ],
         'binary'          => [
             'icon'  => 'fa-gift',
-            'title' => 'Calculate bonus: Binary',
-            'body'  => 'Weekly turnover: :point_l | :point_r <br> Bonus: :bonus %  <br> Amount: :amount USD <br> Output to: :to',
+            'title' => 'Подсчитанный бонус: Бинарный',
+            'body'  => 'Еженедельный оборот: :point_l | :point_r <br> Бонус: :bonus %  <br> Сумма: :amount USD <br> Выведено на: :to',
         ],
         'sponsor-deposit' => [
             'icon'  => 'fa-gift',
-            'title' => 'Referral bonus: Package',
-            'body'  => 'User: :name <br> Level : :level <br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Реферальный бонус: Пакет',
+            'body'  => 'User: :name <br> Level : :level <br> Сумма: :amount USD<br> Выведено на: :to',
         ],
         'sponsor-shares'  => [
             'icon'  => 'fa-gift',
-            'title' => 'Referral bonus: Shares',
-            'body'  => 'User: :name <br> Level : :level <br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Реферальный бонус: Акции',
+            'body'  => 'Пользователь: :name <br> Уровень : :level <br> Сумма: :amount USD<br> Выведено на: :to',
         ],
         'rank'            => [
             'icon'  => 'fa-gift',
-            'title' => 'Bonus for new rank',
-            'body'  => 'Rank: :rank<br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Бонус за новый ранг',
+            'body'  => 'Ранг: :rank<br> Сумма: :amount USD<br> Выведено на: :to',
         ],
     ],
     'requests'  => [
         'replenishment'       => [
             'icon'  => 'fa-money',
-            'title' => 'Replenishment',
-            'body'  => 'Amount: :amount USD<br> Type balance: :method <br> Type balance: :method',
+            'title' => 'Пополнение',
+            'body'  => 'Сумма: :amount USD<br> Тип баланса: :method <br> Тип баланса: :method',
         ],
         'withdraw-processing' => [
             'icon'  => 'fa-btc',
             'title' => 'Withdraw',
-            'body'  => 'Amount: :amount USD<br> Wallet Address: :wallet_address <br> Withdraw: :method => :to',
+            'body'  => 'Сумма: :amount USD<br> Адрес кошелька: :wallet_address <br> Снятие: :method => :to',
         ],
         'withdraw-success'    => [
             'icon'  => 'fa-btc',
-            'title' => 'Withdraw: success',
-            'body'  => 'ID: :id <br> Amount: :amount USD<br> Output to: :to<br> Txid: :tx',
+            'title' => 'Снятие: успешно',
+            'body'  => 'ID: :id <br> Сумма: :amount USD<br> Выведено на: :to<br> Txid: :tx',
         ],
         'withdraw-rejection'  => [
             'icon'  => 'fa-btc',
-            'title' => 'Withdraw: rejection',
-            'body'  => 'ID: :id <br> Amount: :amount USD<br> Output to: :to',
+            'title' => 'Снятие: отклонено',
+            'body'  => 'ID: :id <br> Сумма: :amount USD<br> Выведено на: :to',
         ],
     ],
 ];

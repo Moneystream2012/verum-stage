@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'title' => 'Investment Token BTC',
-    'menu_title' => 'Investment Token BTC',
+    'title' => 'Инвестиционный токен BTC',
+    'menu_title' => 'Инвестиционный токен BTC',
 
-    'success'  => 'Product purchased.',
-    'transfer' => 'Successful transfer of funds.',
+    'success'  => 'Продукт приобретен.',
+    'transfer' => 'Успешный перевод средств.',
     'status'   => [
-        0 => 'final',
-        1 => 'active',
+        0 => 'завершен',
+        1 => 'активен',
     ],
 ];

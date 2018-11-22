@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'New issue',
+    'title' => 'Новое обращение',
 
 ];
