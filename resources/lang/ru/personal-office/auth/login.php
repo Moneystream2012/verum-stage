@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title'       => 'Login',
+    'title'       => 'Логин',
     'description' => '',
 
 ];

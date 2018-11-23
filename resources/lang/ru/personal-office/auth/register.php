@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'title'       => 'Sign UP',
+    'title'       => 'Регистрация',
     'description' => '',
-    'q'           => 'You will be sent a confirmation email',
+    'q'           => 'Вам будет отправлено письмо с подтверждением',
 
 ];

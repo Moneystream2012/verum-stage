@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'title' => 'User Blocked',
+    'title' => 'Пользователь заблокирован',
 ];

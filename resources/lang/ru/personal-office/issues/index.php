@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Issues',
+    'title' => 'Запросы',
 
 ];

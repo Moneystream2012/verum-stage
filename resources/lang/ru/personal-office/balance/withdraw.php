@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'title' => 'Withdraw',
+    'title' => 'Вывести',
 
     'status' => [
-        0 => 'processing',
-        1 => 'success',
-        2 => 'rejection',
+        0 => 'обработка',
+        1 => 'успешно',
+        2 => 'отклонено',
     ],
 
 ];

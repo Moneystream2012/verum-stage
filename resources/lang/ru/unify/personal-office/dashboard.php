@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Dashboard',
-    'description' => 'Detailed information',
+    'title' => 'Приборная панель',
+    'description' => 'Подробная информация',
     'icon' => 'icon-th-large',
 ];

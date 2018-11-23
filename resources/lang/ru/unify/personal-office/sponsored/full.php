@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Global',
-    'menu_title' => 'Global',
+    'title' => 'Общий',
+    'menu_title' => 'Общий',
     '',
 ];

@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'title' => 'Profile',
+    'title' => 'Профиль',
 
     'msg' => [
-        'update'         => 'Data updated successfully.',
+        'update'         => 'Данные обновлены успешно.',
         'social_account' => [
             'successfully' => 'Your account has been successfully linked to your account <strong>:provider</strong>.',
             'cancelled'    => 'The account has been successfully cancelled <strong>:provider</strong>.',

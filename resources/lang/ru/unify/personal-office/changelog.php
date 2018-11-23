@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Changelog',
+    'title' => 'Лог изменений',
 
 ];

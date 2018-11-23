@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'title' => 'Settings',
+    'title' => 'Настройки',
 
     //	msg
     'success' => [
-        'payment'              => 'Payment settings saved.',
-        'password'             => 'Password settings saved.',
-        'transaction_password' => 'Transaction password saved.',
+        'payment'              => 'Настройки платежей сохранены.',
+        'password'             => 'Настройки пароля сохранены.',
+        'transaction_password' => 'Пароль транзакции сохранен.',
     ],
 ];

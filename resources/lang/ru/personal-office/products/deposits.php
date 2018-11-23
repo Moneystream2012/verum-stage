@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'title' => 'Investment Token',
+    'title' => 'Инвестиционный Токен',
 
-    'success'  => 'Product purchased.',
-    'transfer' => 'Successful transfer of funds.',
+    'success'  => 'Продукт приобретен.',
+    'transfer' => 'Успешный перевод средств.',
     'status'   => [
-        0 => 'final',
-        1 => 'active',
+        0 => 'завершен',
+        1 => 'активен',
     ],
 ];

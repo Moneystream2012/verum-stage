@@ -2,42 +2,42 @@
 
 return [
     'title' => 'FAQ',
-    'description' => 'Frequently Asked Questions',
+    'description' => 'Часто задаваемые вопросы',
     'icon'  => 'icon-help-with-circle',
 
     'items' => [
         [
-            'title' => 'How to replenish the balance on your back account?',
-            'body'  => 'You can replenish your balance with Bitcoin or Verumcoin',
+            'title' => 'Как пополнить баланс на Вашем личном счете?',
+            'body'  => 'Вы можете пополнить Ваш баланс с помощью Биткойна или Verumcoin',
         ],
         [
-            'title' => 'Is there any tax for replenishment or deduction?',
-            'body'  => 'Yes, there is. There is 0,5% tax for replenishment, deduction or transfer.',
+            'title' => 'Есть ли комиссия на пополнение или вывод средств?',
+            'body'  => 'Да, есть. Комиссия составляет 0,5% tax на пополнение, вывод средств или перевод.',
         ],
         [
-            'title' => 'How soon are bonuses  and rewards calculated?',
-            'body'  => 'Referral, binary and generative bonuses are awarded every week at 9:00 (London). Rewards for the ranks are awarded after the interview.',
+            'title' => 'Как скоро Вам начисляются бонусы и вознаграждения?',
+            'body'  => 'Реферальные, бинарные и генерирующие бонусы начисляются ежедневно в рабочие дни в 9:00 (по Лондонскому времени). Вознаграждения за звание начисляются после интервью.',
         ],
         [
-            'title' => 'Can I earn on an affiliate program without an investment package?',
-            'body'  => 'No, you can not.',
+            'title' => 'Могу ли я зарабатывать на партнерской программе без инвестиционного пакета?',
+            'body'  => 'Нет, Вы не можете.',
         ],
         [
-            'title' => 'What types of balances exist in the account?',
-            'body'  => 'There are two types balances "Balance" and "Mining Balance".<br>
-                    "Balance" is the basic balance. All bonuses and rewards  are awarded to it.<br>
-                    "Mining Balance" is a balance to which the income from the investment package is accrued.<br>
-                    "Balance and Mining Balance" can be replenished, withdrawn, transferred or used to purchase products of the company.',
+            'title' => 'Какие типы балансов существуют в аккаунте?',
+            'body'  => 'Существует два типа балансов: «Баланс» и «Инвестиционный Баланс».<br>
+                    "Баланс" это основной баланс. Все бонусы и награды начисляются на него.<br>
+                    "Инвестиционный Баланс" является балансом, на который начисляется доход от инвестиционного пакета.<br>
+                    "Баланс и Инвестиционный Баланс" могут быть пополнены, выведены, переведены или использованы для покупки продуктов Компании.',
         ],
         [
-            'title' => 'How to withdraw funds?',
-            'body'  => 'You can withdraw funds from the basic balance(Balance) to the Bitcoin wallet or to the Verumcoin wallet.<br>
-                    You can withdraw  funds from "Mining Balance" to the Verumcoin wallet.',
+            'title' => 'Как вывести средства?',
+            'body'  => 'Вы можете вывести средства из основного баланса ("Баланс") в кошелек Биткойн или в кошелек Verumcoin.<br>
+                    Вы можете вывести средства из «Mining баланса» в кошелек Verumcoin.',
         ],
         [
-            'title' => 'What does the TeamDeveloper option mean?',
-            'body'  => 'TeamDeveloper is 6 people from your team, 2 of which are personally invited by you(first line) and placed in different branches of the binary and 4 invited by your invitees on 2 (second line) and placed at the branches in the same way.<br>
-                    Activating this option allows you to change the registration branches of the new partners and receive a generative bonus.</br>',
+            'title' => 'Что означает опция TeamDeveloper?',
+            'body'  => 'TeamDeveloper это шесть человек из Вашей команды, двое из которых лично приглашены вами (первая линия) и размещены в разных ветках матрицы и четыре приглашены Вашими приглашенными на 2 (вторая линия) и размещены в филиалах таким же образом.<br>
+                    Активация этого параметра позволяет вам изменять ветки для регистрации новых партнеров и получать генерирующие бонусы.</br>',
         ],
         //[
         //		'title' => '',

@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'title' => 'Level Investment Shares',
+    'title' => 'Уровни инвестиционных акций',
 
-    'success' => 'Shares purchased.',
-    'refund'  => 'The shares were sold.',
+    'success' => 'Акции приобретены.',
+    'refund'  => 'Акции были проданы.',
 ];

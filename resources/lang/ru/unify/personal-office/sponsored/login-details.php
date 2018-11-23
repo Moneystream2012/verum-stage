@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Login details',
+    'title' => 'Детали входа',
     '',
 ];

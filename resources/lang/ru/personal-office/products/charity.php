@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Сharity',
+    'title' => 'Благотворительность',
 
-    'success' => 'Thank you for the donation.',
+    'success' => 'Спасибо за пожертвование.',
 ];
