@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Личная',
-    'menu_title' => 'Личная',
+    'title' => 'Личный',
+    'menu_title' => 'Личный',
 ];

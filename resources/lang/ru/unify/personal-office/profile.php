@@ -6,14 +6,14 @@ return [
     'msg' => [
         'update'         => 'Данные обновлены успешно.',
         'social_account' => [
-            'successfully' => 'Your account has been successfully linked to your account <strong>:provider</strong>.',
-            'cancelled'    => 'The account has been successfully cancelled <strong>:provider</strong>.',
-            'busy'         => 'Account <strong>:provider</strong> for communication is already someone busy.',
+            'successfully' => 'Ваша учетная запись успешно связана с вашей учетной записью <strong>:provider</strong>.',
+            'cancelled'    => 'Успешно удалена учетная запись <strong>:provider</strong>.',
+            'busy'         => 'Эккаунт <strong>:provider</strong> для коммуникации уже кем-то занят.',
         ],
         'email' => [
-            'activation' => 'Activation email sent to <strong>:email</strong>.',
-            'confirmed'  => 'Your email address has already been confirmed.',
-            'resending'  => 'Resending will be available in 5 minutes.',
+            'activation' => 'Электронное письмо для активации отправлено на <strong>:email</strong>.',
+            'confirmed'  => 'Ваш адрес электронной почты подтвержден.',
+            'resending'  => 'Повторная отправка будет доступна через 5 минут.',
         ],
     ],
 ];

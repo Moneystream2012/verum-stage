@@ -3,7 +3,7 @@
 return [
     'title' => 'Пополнение',
 
-    'comment' => 'Пополнение :to amount: :amount $',
+    'comment' => 'Пополнение :to сумма: :amount $',
 
     'status' => [
         0 => 'обрабатывается',
