@@ -13,6 +13,15 @@ use Mockery\Exception;
 
 class ReplenishmentPayController extends Controller
 {
+	const freeKassaServerIps = [
+		'136.243.38.147',
+		'136.243.38.149',
+		'136.243.38.150',
+		'136.243.38.151',
+		'136.243.38.189',
+		'88.198.88.98'
+	];
+
     public function show()
     {
         $data = auth()->user()->replenishments()->where('method', '<>', 'admin')->latest()->get();
@@ -37,7 +46,7 @@ class ReplenishmentPayController extends Controller
     {
         $this->validate($request, [
             'amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
-            'method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money',
+            'method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
             'type_balance' => 'required|in:balance,mining_balance',
         ]);
 
@@ -97,6 +106,9 @@ class ReplenishmentPayController extends Controller
             case 'yandex-money':
                 return $this->yandexMoney($order);
                 break;
+            case 'free-kassa':
+                return $this->freeKassa($order);
+                break;
             default:
                 flash()->error('Error replenishment.');
         }
@@ -117,6 +129,8 @@ class ReplenishmentPayController extends Controller
             $order_id = $request->input('PAYMENT_ID');
         } elseif ($method == 'yandex-money') {
             $order_id = $request->input('label');
+        } elseif ($method == 'free-kassa') {
+            $order_id = $request->input('MERCHANT_ORDER_ID');
         }
 
         $order_id = (int)$order_id;
@@ -166,6 +180,13 @@ class ReplenishmentPayController extends Controller
                 } else {
                     $status = 'invalid';
                 }
+            } elseif ($method == 'free-kassa') {
+                $freeKassaServerIP = $_SERVER[ isset($_SERVER['HTTP_X_REAL_IP']) ? 'HTTP_X_REAL_IP' : 'REMOTE_ADDR'];
+                if (!in_array($freeKassaServerIP, self::freeKassaServerIps)) {
+                	die("hacking attempt!");
+                }
+
+	            $sign = md5($merchant_id.':'.$_REQUEST['AMOUNT'].':'.$merchant_secret.':'.$_REQUEST['MERCHANT_ORDER_ID']);
             }
 
             if (!is_null($status)) {
@@ -339,6 +360,21 @@ class ReplenishmentPayController extends Controller
                 'method' => 'advcash',
                 'token' => $order->token,
             ]),
+        ]);
+    }
+
+    private function freeKassa($order)
+    {
+        $merchantId = config('freekassa.merchant_id');
+        $secret = config('freekassa.secret');
+        $sign = md5($merchantId . ':'. $order->full_amount . ':'. $secret . ':'. $order->replenishment_id);
+
+        return view('freekassa.form', [
+            'merchant_id' => $merchantId,
+            'order_id' => $order->replenishment_id,
+            'amount' => $order->full_amount,
+            'sign' => $sign,
+            'currency' => $order->currency,
         ]);
     }
 

@@ -90,6 +90,7 @@
                                 <option value="">Select an Option</option>
                                 <option value="bitcoin">Bitcoin (altcoins)</option>
                                 <option value="perfect_money">Perfect Money</option>
+                                <option value="free_kassa">Free-Kassa</option>
                                 {{--<option value="verumcoin">Verumcoin</option>--}}
                                 {{--<option value="advcash">AdvCash</option>--}}
                             </select>

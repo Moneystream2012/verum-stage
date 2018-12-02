@@ -85,6 +85,7 @@
                                 {{--<option value="walletone">WalletOne (Visa/MasterCard)</option>--}}
                                 {{--<option value="advcash">AdvCash</option>--}}
                                 <option value="yandex-money">Yandex Money (Visa/MasterCard)</option>
+                                <option value="free-kassa">Free Kassa</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
