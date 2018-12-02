@@ -130,7 +130,7 @@
                     <i class="icon-flow-tree"></i>
                 </div>
                 <h5>{{formatUSD($turnover->direct_all ?? 0.00)}}</h5>
-                <p>Turnover USD</p>
+                <p>{{$l_lang->turnover}} USD</p>
             </a>
         </div>
         <div class="col">
@@ -139,7 +139,7 @@
                     <i class="icon-gift"></i>
                 </div>
                 <h5>{{formatUSD($turnover->direct_total ?? 0.00)}}</h5>
-                <p>Bonus USD</p>
+                <p>{{$l_lang->bonus}} USD</p>
             </a>
         </div>
     </div>

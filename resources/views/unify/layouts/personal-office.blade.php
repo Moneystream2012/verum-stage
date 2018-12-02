@@ -210,9 +210,9 @@
                             <li class="{{ $isProducts = Route::is('personal-office.products.deposits.*', 'personal-office.trading.index') ? 'active selected' : '' }}">
                                 <a href="#" class="has-arrow" aria-expanded="false">
 										<span class="has-icon">
-											<i class="{{$l_lang->nav['products']['icon']}}"></i>
+											<i class="{{$l_lang->nav['products']['icon'] ?? null}}"></i>
 										</span>
-                                    <span class="nav-title">{{$l_lang->nav['products']['title']}}</span>
+                                    <span class="nav-title">{{$l_lang->nav['products']['title'] ?? null}}</span>
                                 </a>
                                 <ul aria-expanded="false" class="{{$isProducts ? 'collapse in': ''}}">
                                     <li class="{{ Route::is('personal-office.products.deposits.usd') ? 'current-page' : '' }}">
@@ -250,9 +250,9 @@
                             <li class="{{ $isFinance = Route::is('personal-office.replenishment.index', 'personal-office.finance.*') ? 'active selected' : '' }}">
                                 <a href="#" class="has-arrow" aria-expanded="false">
 										<span class="has-icon">
-											<i class="{{$l_lang->nav['finance']['icon']}}"></i>
+											<i class="{{$l_lang->nav['finance']['icon'] ?? null}}"></i>
 										</span>
-                                    <span class="nav-title">{{$l_lang->nav['finance']['title']}}</span>
+                                    <span class="nav-title">{{$l_lang->nav['finance']['title'] ?? null}}</span>
                                 </a>
                                 <ul aria-expanded="false" class="{{$isFinance ? 'collapse in': ''}}">
                                     <li class="{{ Route::is('personal-office.replenishment.index') ? 'current-page' : '' }}">
@@ -394,11 +394,11 @@
                         <div class="row align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
                                 <div class="page-icon">
-                                    <i class="{{$v_lang->icon}}"></i>
+                                    <i class="{{$v_lang->icon ?? null}}"></i>
                                 </div>
                                 <div class="page-title">
-                                    <h5>{{$v_lang->title}}</h5>
-                                    <h6 class="sub-heading">{{$v_lang->description}}</h6>
+                                    <h5>{{$v_lang->title ?? null}}</h5>
+                                    <h6 class="sub-heading">{{$v_lang->description ?? null}}</h6>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-2 mt-md-0">

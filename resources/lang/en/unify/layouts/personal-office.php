@@ -2,6 +2,8 @@
 
 return [
     'balance' => 'Balance',
+    'turnover' => 'Turnover',
+    'bonus' => 'Bonus',
     'logout'  => 'Logout',
     'empty'   => 'Empty',
     'copy_link' => 'Copy link',
@@ -33,5 +35,5 @@ return [
             'title' => 'Finance',
             'icon'  => 'icon-monetization_on'
         ]
-    ]
+    ],
 ];
