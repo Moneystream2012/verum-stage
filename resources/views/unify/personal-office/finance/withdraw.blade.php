@@ -56,11 +56,13 @@
                                 <option value="balance-BTC">{{$l_lang->balance}} USD => BTC</option>
                                 <option value="balance-VMC">{{$l_lang->balance}} USD => VMC</option>
                                 <option value="balance-RUB">{{$l_lang->balance}} USD => Yandex Money</option>
+                                <option value="balance-USD">{{$l_lang->balance}} USD => FreeKassa (USD)</option>
                             </optgroup>
                             <optgroup label="{{$l_lang->balance}} VMC">
                                 <option value="mining_balance-BTC">{{$l_lang->balance}} VMC => BTC</option>
                                 <option value="mining_balance-VMC">{{$l_lang->balance}} VMC => VMC</option>
                                 <option value="mining_balance-RUB">{{$l_lang->balance}} VMC => Yandex Money</option>
+                                <option value="mining_balance-USD">{{$l_lang->balance}} VMC => FreeKassa (USD)</option>
                             </optgroup>
                         </select>
                     </div>

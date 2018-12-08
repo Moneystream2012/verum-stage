@@ -10,6 +10,7 @@ use CoinGate\Merchant\Order;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Mockery\Exception;
+use App\Post;
 
 class ReplenishmentPayController extends Controller
 {
@@ -123,13 +124,15 @@ class ReplenishmentPayController extends Controller
      */
     public function callback(Request $request, $method)
     {
+    	$order_id = 0;
+
         if ($method == 'bitcoin') {
             $order_id = $request->input('order_id');
         } elseif ($method == 'perfect_money') {
             $order_id = $request->input('PAYMENT_ID');
         } elseif ($method == 'yandex-money') {
             $order_id = $request->input('label');
-        } elseif ($method == 'free-kassa') {
+        } elseif ($method == 'freekassa') {
             $order_id = $request->input('MERCHANT_ORDER_ID');
         }
 
@@ -141,7 +144,7 @@ class ReplenishmentPayController extends Controller
             return;
         }
 
-        if ($request->input('token') == $replenishment->token || $method == 'yandex-money') {
+        if ($request->input('token') == $replenishment->token || $method == 'yandex-money' || $method == 'freekassa') {
             $status = null;
             $amount = $replenishment->cost_amount + $replenishment->amount;
             if ($method == 'bitcoin') {
@@ -180,13 +183,23 @@ class ReplenishmentPayController extends Controller
                 } else {
                     $status = 'invalid';
                 }
-            } elseif ($method == 'free-kassa') {
+            } elseif ($method == 'freekassa') {
                 $freeKassaServerIP = $_SERVER[ isset($_SERVER['HTTP_X_REAL_IP']) ? 'HTTP_X_REAL_IP' : 'REMOTE_ADDR'];
                 if (!in_array($freeKassaServerIP, self::freeKassaServerIps)) {
-                	die("hacking attempt!");
+                	die("Hacking attempt!");
                 }
 
-	            $sign = md5($merchant_id.':'.$_REQUEST['AMOUNT'].':'.$merchant_secret.':'.$_REQUEST['MERCHANT_ORDER_ID']);
+	            $merchantId = config('freekassa.merchant_id');
+	            $secret = config('freekassa.secret2');
+	            $freekassaAmount = $request->input('AMOUNT');
+	            $sign = md5($merchantId .':'. $freekassaAmount .':'. $secret .':'. $order_id);
+
+	            if ($sign == $_POST['SIGN'] && round($freekassaAmount, 2) >= round($amount, 2)) {
+		            $status = 'paid';
+		            $replenishment->pay();
+	            } else {
+		            $status = 'invalid';
+	            }
             }
 
             if (!is_null($status)) {
@@ -215,6 +228,20 @@ class ReplenishmentPayController extends Controller
 
         return redirect()->route('personal-office.replenishment.index');
     }
+
+	public function success_freekassa()
+	{
+		flash()->success(trans('unify/personal-office/finance/replenishment.pay_success'))->important();
+
+		return redirect()->route('personal-office.replenishment.index');
+	}
+
+	public function fail_freekassa()
+	{
+		flash()->error(trans('unify/personal-office/finance/replenishment.pay_fail'))->important();
+
+		return redirect()->route('personal-office.replenishment.index');
+	}
 
     public function ecommerce(Request $request)
     {

@@ -24,6 +24,8 @@ Route::post('password/reset', 'User\Auth\ResetPasswordController@reset')->name('
 Route::post('replenishment/callback/{method}', 'User\ReplenishmentPayController@callback')->name('replenishment.callback');
 Route::any('replenishment/success/{id}', 'User\ReplenishmentPayController@success')->name('replenishment.success');
 Route::any('replenishment/fail/{id}', 'User\ReplenishmentPayController@fail')->name('replenishment.fail');
+Route::any('replenishment/success/freekassa', 'User\ReplenishmentPayController@success.success_freekassa')->name('replenishment.success_freekassa');
+Route::any('replenishment/fail/freekassa', 'User\ReplenishmentPayController@fail.fail_freekassa')->name('replenishment.fail_freekassa');
 
 Route::post('replenishment/study/callback', 'User\ReplenishmentStudyController@callback')->name('replenishment.study.callback');
 Route::get('replenishment/study/success/{id}', 'User\ReplenishmentStudyController@success')->name('replenishment.study.success');

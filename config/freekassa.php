@@ -10,9 +10,9 @@
          |
          */
 
-        'merchant_id' => '107941',
-        'secret' => 'u0klajgl',
-        'secret2' => 'x5m03bh1',
+        'merchant_id' => '106590',      // 107941
+        'secret' => 'xrt6qgqy',         // u0klajgl
+        'secret2' => 'fzrnkfom',        //x5m03bh1
 
         /*
          |--------------------------------------------------------------------------
