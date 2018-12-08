@@ -62,5 +62,6 @@ class Kernel extends HttpKernel
         'session_timeout'  => \App\Http\Middleware\SessionTimeout::class,
 //        'banned_new_issue' => \App\Http\Middleware\BannedNewIssue::class,
         'user_blocked'     => \App\Http\Middleware\UserBlocked::class,
+        'locale'           => \App\Http\Middleware\Locale::class,
     ];
 }

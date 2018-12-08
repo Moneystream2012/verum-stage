@@ -36,6 +36,7 @@ Route::group([
         'auth:user',
         'session_timeout',
         'user_blocked',
+        'locale',
     ],
 ], function () {
     Route::get('/', 'User\DashboardController@index')->name('dashboard');
