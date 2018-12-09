@@ -8,6 +8,12 @@ return [
     'sponsor' => 'Sponsor',
     'country' => 'Country',
     'mobile_number' => 'Mobile Number',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'avatar' => 'Avatar',
+    'allowed_avatar_filetype' => 'Allowed file type extensions are: jpeg, jpg, png. Max size 1 MB',
+    'your_password' => 'Your password',
+    'save' => 'Save',
 
     'balance' => 'Balance',
     'turnover' => 'Turnover',

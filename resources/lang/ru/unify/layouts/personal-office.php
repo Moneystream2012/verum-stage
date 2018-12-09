@@ -8,6 +8,12 @@ return [
     'sponsor' => 'Спонсор',
     'country' => 'Страна',
     'mobile_number' => 'Мобильный',
+    'first_name' => 'Имя',
+    'last_name' => 'Фамилия',
+    'avatar' => 'Аватар',
+    'allowed_avatar_filetype' => 'Допустимыми являются типы файлов: jpeg, jpg, png. Макс.размер 1 MB',
+    'your_password' => 'Ваш пароль',
+    'save' => 'Записать',
 
     'balance' => 'Баланс',
     'turnover' => 'Оборот',

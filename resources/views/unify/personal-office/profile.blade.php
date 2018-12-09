@@ -127,7 +127,7 @@
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="inputFirstName" class="control-label">First Name</label>
+                            <label for="inputFirstName" class="control-label">{{$l_lang->first_name}}</label>
                             <input type="text" name="first_name"
                                    class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}"
                                    id="inputFirstName"
@@ -138,7 +138,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputLastName" class="control-label">Last Name</label>
+                            <label for="inputLastName" class="control-label">{{$l_lang->last_name}}</label>
                             <input type="text" name="last_name"
                                    class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}"
                                    id="inputLastName"
@@ -159,7 +159,7 @@
                         </div>--}}
 
                         <div class="form-group">
-                            <label for="mobile_number" class="control-label">Mobile Number</label>
+                            <label for="mobile_number" class="control-label">{{$l_lang->mobile_number}}</label>
                             <input type="hidden" name="mobile_code" id="mobile_code" value="UA">
                             <input type="tel" name="mobile_number"
                                    class="form-control {{ $errors->has('mobile_number') ? ' is-invalid' : '' }}"
@@ -171,7 +171,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="country" class="control-label">Country</label>
+                            <label for="country" class="control-label">{{$l_lang->country}}</label>
                             <select
                                 class="form-control form-chosen form-select2 {{ $errors->has('country') ? ' is-invalid' : '' }}" data-placeholder="Choose a Country..."
                                 name="country">
@@ -185,18 +185,16 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputAvatar">Avatar</label>
+                            <label for="inputAvatar">{{$l_lang->avatar}}</label>
                             <input type="file" class="form-control {{ $errors->has('avatar') ? 'is-invalid' : '' }}" name="avatar" id="inputAvatar"
                                    accept="image/jpeg,image/png,image/jpg">
                             @if ($errors->has('avatar'))
                                 <span class="form-text text-danger">{{ $errors->first('avatar') }}</span>
                             @endif
-                            <small class="form-text text-muted">Allowed file type extensions are: jpeg, jpg, png. Max
-                                size 1 MB
-                            </small>
+                            <small class="form-text text-muted">{{$l_lang->allowed_avatar_filetype}}</small>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword" class="control-label">Your password</label>
+                            <label for="inputPassword" class="control-label">{{$l_lang->your_password}}</label>
                             <input type="password" name="password"
                                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                    id="inputPassword"
@@ -206,7 +204,7 @@
                             @endif
                         </div>
 
-                        <button class="btn btn-block btn-primary" type="submit">Save</button>
+                        <button class="btn btn-block btn-primary" type="submit">{{$l_lang->save}}</button>
                     </form>
                 </div>
             </div>
