@@ -15,6 +15,9 @@ return [
     'your_password' => 'Your password',
     'save' => 'Save',
 
+    'description' => 'Your profile',
+    'verification' => 'Verification',
+
     'balance' => 'Balance',
     'turnover' => 'Turnover',
     'bonus' => 'Bonus',

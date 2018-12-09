@@ -15,6 +15,9 @@ return [
     'your_password' => 'Ваш пароль',
     'save' => 'Записать',
 
+    'description' => 'Ваш профиль',
+    'verification' => 'Верифицирован',
+
     'balance' => 'Баланс',
     'turnover' => 'Оборот',
     'bonus' => 'Бонус',
