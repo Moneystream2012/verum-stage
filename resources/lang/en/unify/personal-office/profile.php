@@ -4,6 +4,8 @@ return [
     'title' => 'Profile',
     'icon' => 'icon-user',
     'description' => 'Your profile',
+    'verification' => 'Verification',
+
     'msg' => [
         'update'         => 'Changes saved.',
         'social_account' => [
@@ -16,6 +18,6 @@ return [
             'confirmed'  => 'Your email address has already been confirmed.',
             'resending'  => 'Resending will be available in 5 minutes.',
         ],
-        'info' => 'When changing data, you need to re-verify!'
+        'info' => 'When changing data, you need to re-verify!',
     ],
 ];
