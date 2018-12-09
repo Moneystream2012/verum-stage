@@ -39,7 +39,7 @@
                                     <!-- Row start -->
                                     <ul class="row no-gutters align-items-center">
                                         <li class="col-7">
-                                            <h6 class="title">Invest Token USD</h6>
+                                            <h6 class="title">{{$l_lang->invest}} Token USD</h6>
                                         </li>
                                         <li class="col-5">
                                             <h4 class="total">
@@ -66,7 +66,7 @@
                                     <!-- Row start -->
                                     <ul class="row no-gutters align-items-center">
                                         <li class="col-7">
-                                            <h6 class="title">Invest Global USD</h6>
+                                            <h6 class="title">{{$l_lang->invest}} Global USD</h6>
                                         </li>
                                         <li class="col-5">
                                             <h4 class="total">
@@ -95,7 +95,7 @@
                             <small class="text-muted">VMC/USD</small>
                         </div>
                         <div class="col text-right">
-                            <span class="text-muted">Price Verumcoin</span>
+                            <span class="text-muted">{{$l_lang->price}} Verumcoin</span>
                         </div>
                     </div>
                 </div>
