@@ -2,6 +2,8 @@
 
 return [
     'title' => 'My Account',
+    'description' => 'Profile',
+    'verification' => 'Verification',
 
     'msg' => [
         'update'         => 'Data updated successfully.',

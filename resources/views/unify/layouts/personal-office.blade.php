@@ -1,7 +1,7 @@
 <?php /* @var \App\User $auth; */ ?>
 @extends('unify.layouts.default')
 @section('title', $v_lang->title)
-@section('description', $v_lang->description ?? null)
+@section('description', $v_lang->description)
 @section('styles')
     <style>
         body,html{margin:0;padding:0}@-webkit-keyframes loading{0%{opacity:0}to{opacity:1}}@keyframes loading{0%{opacity:0}to{opacity:1}}.loading-wrapper{position:fixed;top:0;left:0;background:#f5f6fa;z-index:999999;width:100%;height:100%;overflow:visible;}.loading-wrapper .loading{width:180px;top:50%;margin-top:-23px;text-align:right;left:50%;margin-left:-90px}.loading-wrapper .loading span{top:-12px}.loading-wrapper .loading img{vertical-align:middle;max-width:100%;height:auto;}.loading{position:relative;text-align:center}.loading span{position:relative;display:inline-block;vertical-align:middle;width:9px;height:3px;margin:2px;-webkit-animation:loading 1s infinite alternate;animation:loading 1s infinite alternate}.loading span:first-of-type{background:#65ab53;-webkit-animation-delay:1s;animation-delay:1s}.loading span:nth-of-type(2){background:#4266b2;-webkit-animation-delay:1.1s;animation-delay:1.1s}.loading span:nth-of-type(3){background:#65ab53;-webkit-animation-delay:1.2s;animation-delay:1.2s}.loading span:nth-of-type(4){background:#4266b2;-webkit-animation-delay:1.4s;animation-delay:1.4s}.loading span:nth-of-type(5){background:#65ab53;-webkit-animation-delay:1.6s;animation-delay:1.6s}
