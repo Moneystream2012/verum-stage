@@ -19,6 +19,7 @@ return [
     'amount' => 'Amount',
     'currency' => 'Currency',
     'status' => 'Status',
+    'verification' => 'Verification',
     'date' => 'Date',
     'minimum' => 'Minimum value',
     'maximum' => 'Maximum value',
