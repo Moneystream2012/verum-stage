@@ -1,15 +1,20 @@
 <?php
 
 return [
+    'edit_profile' => 'Редактировать профиль',
+    'member_id' => '# участника',
+    'username' => 'Никнейм',
+    'email' => 'email',
+    'sponsor' => 'Спонсор',
+    'country' => 'Страна',
+    'mobile_number' => 'Мобильный',
+
     'balance' => 'Баланс',
     'turnover' => 'Оборот',
     'bonus' => 'Бонус',
     'logout'  => 'Выход',
     'empty'   => 'Пусто',
     'copy_link' => 'Скопировать ссылку',
-
-    'edit_profile' => 'Редактировать профиль',
-
     'price' => 'Цена',
     'method' => 'Метод',
     'cancel' => 'Отменить',

@@ -1,6 +1,14 @@
 <?php
 
 return [
+    'edit_profile' => 'Edit Profile',
+    'member_id' => 'Member id',
+    'username' => 'Username',
+    'email' => 'Email',
+    'sponsor' => 'Sponsor',
+    'country' => 'Country',
+    'mobile_number' => 'Mobile Number',
+
     'balance' => 'Balance',
     'turnover' => 'Turnover',
     'bonus' => 'Bonus',

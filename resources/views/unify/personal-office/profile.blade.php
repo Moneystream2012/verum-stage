@@ -49,12 +49,12 @@
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Member id: {{$auth->id}}</li>
-                    <li class="list-group-item">Username: {{$auth->username}}</li>
-                    <li class="list-group-item">Email: {{$auth->email}}</li>
-                    <li class="list-group-item">Sponsor: {{$auth->sponsor()->value('username') ?? '-'}}</li>
-                    <li class="list-group-item">Country: {{$auth->country_name}}</li>
-                    <li class="list-group-item">Mobile Number: {{$auth->mobile_number_format}}</li>
+                    <li class="list-group-item">{{$l_lang->member_id}}: {{$auth->id}}</li>
+                    <li class="list-group-item">{{$l_lang->username}}: {{$auth->username}}</li>
+                    <li class="list-group-item">{{$l_lang->email}}: {{$auth->email}}</li>
+                    <li class="list-group-item">{{$l_lang->sponsor}}: {{$auth->sponsor()->value('username') ?? '-'}}</li>
+                    <li class="list-group-item">{{$l_lang->country}}: {{$auth->country_name}}</li>
+                    <li class="list-group-item">{{$l_lang->mobile_number}}: {{$auth->mobile_number_format}}</li>
                 </ul>
             </div>
 
