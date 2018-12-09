@@ -40,6 +40,9 @@ return [
     'transaction_password' => 'Transaction password',
     'member' => 'Member',
     'select_option' => 'Select an Option',
+
+    'description' => 'Description !!!',
+
     'nav' => [
         'products' => [
             'title' => 'Products',
