@@ -3,6 +3,7 @@
 return [
     'title' => 'Профиль',
     'icon' => 'icon-user',
+    'edit_profile' => 'Редактировать профиль',
     'description' => 'Профиль пользователя',
     'verification' => 'Верифицирован',
 

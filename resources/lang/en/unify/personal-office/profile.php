@@ -3,6 +3,7 @@
 return [
     'title' => 'Profile',
     'icon' => 'icon-user',
+    'edit_profile' => 'Edit Profile',
     'description' => 'Your profile',
     'verification' => 'Verification',
 

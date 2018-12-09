@@ -116,7 +116,7 @@
         </div>--}}
         <div class="col-md-7">
             <div class="card">
-                <div class="card-header text-center">Edit Profile</div>
+                <div class="card-header text-center">{{$l_lang->edit_profile}}</div>
                 @if($auth->verified)
                 <p class="p-3 alert-warning text-center mb-0">
                     {{$v_lang->msg['info']}}
